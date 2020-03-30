@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- use bellow syntax ( <%- -%> ) to use include function -->
+    <%- include('./partials/nav', { fromMain : 'logout'}) -%>
+
+    <div style="border:1px solid black; text-align: center;">
+      <div>
+        This is body section here
+      </div>
+      <div>
+        <!-- use bellow syntax ( <% %> ) to put js syntax -->
+        <% if (user) { %>
+        <div><%= user %></div>
+        <% } %>
+      </div>
+      <div>
+        <!-- use bellow syntax ( <%# %> ) to put ejs comments -->
+        <div><%# this is ejs comment %></div>
+      </div>
+      <div>
+        <!-- use bellow syntax ( <%= %> ) to write js variables -->
+        <div><%= 'this is js string' %></div>
+        <div>username : <%= user %></div>
+      </div>
+    </div>
+
+    <div style="border:1px solid black; text-align: center;">
+      <div>
+        not sure about these tags == "<%_ _%> <%% %>"
+      </div>
+    </div>
+
+    <%- include('./partials/footer') -%>
+  </body>
+</html>

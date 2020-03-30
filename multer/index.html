@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post" action="/profile" enctype="multipart/form-data">
+      <input name="avatar" type="file" />
+      <input type="submit" />
+    </form>
+
+    <form method="post" action="/photos" enctype="multipart/form-data">
+      <input name="photos" type="file" multiple />
+      <input type="submit" />
+    </form>
+
+    <form method="post" action="/sharpProfile" enctype="multipart/form-data">
+      <input name="sharpAvatar" type="file" />
+      <input type="submit" />
+    </form>
+
+    <div>
+      <!-- <img src="http://localhost:3000/getPhoto/" alt="" /> -->
+    </div>
+  </body>
+</html>
